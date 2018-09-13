@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai4</title>
+</head>
+<body>
+<script>
+    function fouragle(height, weight) {
+        let write = "";
+        for (let i = 0; i < height; i++) {
+            write += "\n";
+            for (let j = 0; j < weight; j++) {
+                if ((i === 0) || (i === (height - 1))) {
+                    write += "*"
+                } else {
+                    if ((j === 0) || (j === (weight - 1))) {
+                        write += "*";
+                    }
+                    else {
+                        write += " "
+                    }
+                }
+            }
+        }
+        console.log(write);
+    }
+    fouragle(5,17);
+</script>
+</body>
+</html>

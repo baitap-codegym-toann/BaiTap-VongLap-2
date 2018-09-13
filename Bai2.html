@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+    function giaiThua(n) {
+        if (n < 0) {
+            return "đây là số âm mà ?? :D ??";
+        }
+        if (n < 3) {
+            return n;
+        }
+        return n * giaiThua(n - 1);
+    }
+</script>
+</body>
+</html>

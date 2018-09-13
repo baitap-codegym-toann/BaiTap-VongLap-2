@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<script>
+    function laiSuatMonth(soTien,laiSuat,thoiGian) {
+        laiSuat =laiSuat/100;
+        for (let i =0;i<thoiGian;i++)
+        {
+            soTien = soTien+(soTien*laiSuat);
+        }
+        return soTien;
+    }
+    let money = prompt("nhập: số tiền cho vay - lãi suất - thời gian","");
+    money = money.split(" ").join("");
+    money = money.split("-");
+    alert(
+        "số tiền sau khi gửi "+ money[2]+ " tháng là "+
+            laiSuatMonth(Number(money[0]),Number(money[1]),Number(money[2]))
+    );
+</script>
+</body>
+</html>

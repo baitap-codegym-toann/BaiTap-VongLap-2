@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6</title>
+</head>
+<body>
+
+<script>
+    function triagle(bool,stringAlign,size) {
+        let write ="";
+        let inARow="";
+        let operation ="";
+        if (bool){
+            operation = "inARow+=\"*\"";
+        }else {
+            for (let i = 0; i<(size+1);i++){
+                inARow +="*"
+            }
+            operation = "inARow = inARow.slice(0,(inARow.length-1))";
+        }
+        for (let i =0;i<size;i++){
+            write = write+"<br>";
+            eval(operation);
+            write+=inARow;
+        }
+        document.getElementById("tri").align = stringAlign;
+        document.getElementById("tri").innerHTML = write;
+    }
+
+    alert("run: triagle(boolean,align,size) to print the triagle !!!")
+</script>
+</body>
+</html>
