@@ -7,28 +7,32 @@
 <body>
 <p align="center" id="tri"></p>
 <script>
-    function triagle(bool,stringAlign,size) {
-        let write ="";
-        let inARow="";
-        let operation ="";
-        if (bool){
-            operation = "inARow+=\"*\"";
-        }else {
-            for (let i = 0; i<(size+1);i++){
-                inARow +="*";
+    function triagle(bool, stringAlign, size) {
+        let write = "";
+        let inARow = "";
+        let operation = "";
+
+
+        if (bool) {//xác định xem nên vẽ xuôi hay vẽ ngược
+            operation = "inARow+=\"*\"";//Xuôi(cứ mỗi dòng thì thêm 1 * vào)
+        } else {
+            for (let i = 0; i < (size + 1); i++) {//ngược
+                inARow += "*";//khởi tạo sting ban đầu (***************)
             }
-            operation = "inARow = inARow.slice(0,(inARow.length-1))";
+            operation = "inARow = inARow.slice(0,(inARow.length-1))";//mỗi dòng trừ đi 1*
         }
-        for (let i =0;i<size;i++){
-            write = write+"<br>";
-            eval(operation);
-            write+=inARow;
+
+        for (let i = 0; i < size; i++) {//vòng lặp in ra màn hình
+            write = write + "<br>";//mỗi khi dòng mới dòng thì break
+            eval(operation);// chuyển biểu thức string trong operation thành mã thực thi
+            write += inARow;
         }
-        document.getElementById("tri").align = stringAlign;
-        document.getElementById("tri").innerHTML = write;
+        document.getElementById("tri").align = stringAlign;// align
+        document.getElementById("tri").innerHTML = write;// in ra màn hình
     }
 
-    alert("run: triagle(boolean,align,size) to print the triagle !!!")
+
+    alert("run: triagle(boolean,align,size) to print the triagle !!!");//hdsd
 </script>
 </body>
 </html>
